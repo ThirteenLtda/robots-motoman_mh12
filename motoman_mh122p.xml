@@ -195,11 +195,32 @@
      <rotorinertia></rotorinertia>
      <maxtorque>9.8</maxtorque>
    </Joint>
+
+   <Body name="Flame" type="dynamic">
+     <offsetfrom>Arm5</offsetfrom>
+     <Geom type="cylinder">
+       <Translation>-0.265 0 0</Translation>
+       <RotationAxis>0 0 1 90</RotationAxis>
+       <radius>0.005</radius>
+       <height>0.23</height>
+       <diffuseColor>1 0 0</diffuseColor>
+     </Geom>
+   </Body>
+
+   <joint type="hinge" enable="false">
+     <body>Flame</body>
+     <body>Arm5</body>
+     <limits>0 0</limits>
+   </joint>
  <!--  -->
  </KinBody>
- <Manipulator name="arm">
-   <effector>Arm5</effector>
-   <Translation>-0.15 0 0</Translation>    
+ <Manipulator name="effector">
+   <effector>Flame</effector>
+<!-- 
+   <rotationaxis>1 0 0 -90</rotationaxis>
+   <rotationaxis>0 1 0 180</rotationaxis>
+ -->
+   <Translation>-0.38 0 0</Translation>    
    <base>Base</base>           
  </Manipulator>
    
