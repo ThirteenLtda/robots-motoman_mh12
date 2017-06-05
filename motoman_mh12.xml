@@ -1,6 +1,5 @@
 <Robot name="MH122"> 
- <KinBody makejoinedlinksadjacent="0">
-   
+<KinBody>
 	<Body name="Base" type="dynamic">
 		<Geom type="trimesh">
 			<collision>Base.wrl</collision>
@@ -40,7 +39,7 @@
      <limitsdeg>-170 170</limitsdeg>
      <axis>0 0 1</axis>
      <maxveldeg>220</maxveldeg>
-     <resolution>0.08</resolution>
+     <maxacceldeg>384</maxacceldeg>
      <weigth></weigth>
      <rotorinertia></rotorinertia>
      <maxtorque></maxtorque>
@@ -68,10 +67,10 @@
      <Body>Arm1</Body>
      <offsetfrom>Arm1</offsetfrom>
      <anchor>0.155 0 0.45</anchor>
-     <limitsdeg>-90 155</limitsdeg>
+     <limitsdeg>-85 155</limitsdeg>
      <axis>0 1 0</axis>
      <maxveldeg>200</maxveldeg>
-     <resolution>0.08</resolution>
+     <maxacceldeg>533</maxacceldeg>
      <weigth></weigth>
      <rotorinertia></rotorinertia>
      <maxtorque></maxtorque>
@@ -100,10 +99,10 @@
      <offsetfrom>Arm2</offsetfrom>
      <anchor>0.155 0 1.064</anchor>
      <weight>3</weight>
-     <limitsdeg>240 -175</limitsdeg>
+     <limitsdeg>154 -97</limitsdeg>
      <axis>0 -1 0</axis>
      <maxveldeg>220</maxveldeg>
-     <resolution>0.08</resolution>
+     <maxacceldeg>916</maxacceldeg>
      <weigth></weigth>
      <rotorinertia></rotorinertia>
      <maxtorque></maxtorque>
@@ -134,7 +133,7 @@
      <limitsdeg>-180 180</limitsdeg>
      <axis>-1 0 0</axis>
      <maxveldeg>410</maxveldeg>
-     <resolution>0.08</resolution>
+     <maxacceldeg>916</maxacceldeg>
      <weigth></weigth>
      <rotorinertia></rotorinertia>
      <maxtorque>22</maxtorque>
@@ -166,7 +165,7 @@
      <limitsdeg>-135 135</limitsdeg>
      <axis>0 -1 0</axis>
      <maxveldeg>410</maxveldeg>
-     <resolution>0.08</resolution>
+     <maxacceldeg>916</maxacceldeg>
      <weigth></weigth>
      <rotorinertia></rotorinertia>
      <maxtorque>22</maxtorque>
@@ -181,12 +180,6 @@
        <height>0.30</height>
        <diffuseColor>0.05 0.05 0.05</diffuseColor>
      </Geom> 
-    <!--
-    <mass type="custom">
-	<total>0</total>
-	<com>0 0 0</com>
-	</mass>
-    --> 
     <mass type="custom">
 		<total>8.5</total>
 		<com>0 0 0</com>
@@ -206,7 +199,7 @@
      <limitsdeg>-360 360</limitsdeg>
      <axis>-1 0 0</axis>
      <maxveldeg>610</maxveldeg>
-     <resolution>0.08</resolution>
+     <maxacceldeg>916</maxacceldeg>
      <weigth></weigth>
      <rotorinertia></rotorinertia>
      <maxtorque>9.8</maxtorque>
@@ -232,15 +225,24 @@
      <body>Gun</body>
      <limits>0 0</limits>
    </joint>
- <!--  -->
+
  </KinBody>
  <Manipulator name="effector">
    <effector>Flame</effector>
-  <!--  <rotationaxis>1 0 0 -90</rotationaxis>
-   <rotationaxis>0 1 0 180</rotationaxis>--> 
    <Translation>0.38 0 0</Translation>    
-   <base>Base</base>  
-   <direction>1 0 0</direction>  <!-- world frame -->       
+   <base>Base</base>        
  </Manipulator>
-   
+ 
+ <AttachedSensor name="ILD1402600SC">
+    <link>Gun</link>
+    <translation>0 0 0.07</translation>
+    <sensor type="BaseLaser2D">
+      <minangle>0</minangle>
+      <maxangle>0</maxangle>
+      <resolution>0.1</resolution>
+      <maxrange>0.6</maxrange>
+      <scantime>0.1</scantime>
+    </sensor>
+  </AttachedSensor>
+ 
 </Robot>
