@@ -99,7 +99,7 @@
      <offsetfrom>Arm2</offsetfrom>
      <anchor>0.155 0 1.064</anchor>
      <weight>3</weight>
-     <limitsdeg>154 -97</limitsdeg>
+     <limitsdeg>-97 154</limitsdeg>
      <axis>0 -1 0</axis>
      <maxveldeg>220</maxveldeg>
      <maxacceldeg>916</maxacceldeg>
