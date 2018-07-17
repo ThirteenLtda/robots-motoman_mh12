@@ -212,10 +212,10 @@
    <Body name="Flame" type="dynamic">
      <offsetfrom>Gun</offsetfrom>
      <Geom type="cylinder">
-       <Translation>1.489 0 1.264</Translation>
+       <Translation>1.439 0 1.264</Translation>
        <RotationAxis>0 0 1 90</RotationAxis>
        <radius>0.005</radius>
-       <height>0.40</height>
+       <height>0.3</height>
        <diffuseColor>1 0 0</diffuseColor>
      </Geom>
     <mass type="custom">
@@ -233,7 +233,7 @@
    <Body name="FlameCube1" type="dynamic">
      <offsetfrom>Gun</offsetfrom>
      <Geom type="box">
-       <Translation>1.589 0 1.264</Translation>
+       <Translation>1.45 0 1.264</Translation>
        <RotationAxis>0 0 1 90</RotationAxis>
        <Extents>0.01 0.01 0.01</Extents>
        <diffuseColor>0 0 0</diffuseColor>
@@ -254,7 +254,7 @@
       <Body name="FlameCube2" type="dynamic">
      <offsetfrom>Gun</offsetfrom>
      <Geom type="box">
-       <Translation>1.789 0 1.264</Translation>
+       <Translation>1.644 0 1.264</Translation>
        <RotationAxis>0 0 1 90</RotationAxis>
        <Extents>0.007 0.007 0.007</Extents>
        <diffuseColor>0 0 0</diffuseColor>
@@ -276,7 +276,7 @@
  
  <Manipulator name="effector">
    <effector>Flame</effector>
-   <Translation>1.689 0 1.264</Translation>
+   <Translation>1.589 0 1.264</Translation>
    <base>Base</base>
  </Manipulator>
 
